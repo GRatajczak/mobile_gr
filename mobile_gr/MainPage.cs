@@ -70,10 +70,10 @@ namespace mobile_gr
         async void OnCallAsync(object sender, System.EventArgs e)
         {
                  if (await this.DisplayAlert(
-                     "Dial a Number",
-                     "Would you like to call " + translatedNumber + "?",
-                     "Yes",
-                     "No"))
+                     "Wybierz numer",
+                     "Zadzwonić do  " + translatedNumber + "?",
+                     "Tak",
+                     "Nie"))
                  {
                 try
                 {
@@ -81,15 +81,15 @@ namespace mobile_gr
                 }
                 catch (ArgumentNullException)
                 {
-                    await DisplayAlert("Unable to dial", "Phone number was not valid.", "OK");
+                    await DisplayAlert("Nie można zadzwonić", "Numer telefonu jest zły", "OK");
                 }
                 catch (FeatureNotSupportedException)
                 {
-                    await DisplayAlert("Unable to dial", "Phone dialing not sup‐ported.", "OK");
+                    await DisplayAlert("Nie można zadzwonić", "Zamiana numeru jest nie wspierana", "OK");
                 }
                 catch (Exception)
                 {
-                    await DisplayAlert("Unable to dial", "Phone dialing failed.", "OK");
+                    await DisplayAlert("Nie można zadzwonić", "Wystąpił błąd zamiany.", "OK");
                 }
             }
         }
