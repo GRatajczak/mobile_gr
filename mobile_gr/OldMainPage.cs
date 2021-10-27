@@ -5,18 +5,16 @@ using Xamarin.Forms;
 
 namespace mobile_gr
 {
-    public class MainPage : ContentPage
+    public class OldMainPage : ContentPage
     {
         Entry phoneNumberText;
         Button translateButton;
         Button callButton;
-
+           
         string translatedNumber;
 
-        public MainPage()
+        public OldMainPage()
         {
-
- 
 
             this.Padding = new Thickness(20, 20, 20, 20);
             StackLayout panel = new StackLayout
@@ -30,7 +28,7 @@ namespace mobile_gr
             });
             panel.Children.Add(phoneNumberText = new Entry
             {
-                Text = "1-111-111-111",
+                Text = "1-111-111-111123dds",
             });
             panel.Children.Add(translateButton = new Button
             {
