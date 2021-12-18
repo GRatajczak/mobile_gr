@@ -1,12 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:mobile_gr"
              x:Class="mobile_gr.MainPage">
-        <StackLayout>
+        <StackLayout Padding="30">
             <Label Text="Wpisz tekst: " FontSize="Large" />
             <Entry x:Name="phoneNumber" Text="123" />
-            <Button x:Name="translateButton" Text="Zamień" />
-            <Button x:Name="call" Text="Zadzwoń" IsEnabled="false"/>
-        </StackLayout>
+        <Button 
+           x:Name="translateButton" Text="Zamień"   
+           Clicked="OnTranslate"
+           TextColor="{x:Static local:SharedResources.ButtonTextColor}"
+           BackgroundColor="{x:Static local:SharedResources.ButtonBkColor}"
+           />
+        <Button x:Name="call" Text="Zadzwoń" IsEnabled="false"  Clicked="OnCall"/>
+ 
+    </StackLayout>
+
 </ContentPage >
